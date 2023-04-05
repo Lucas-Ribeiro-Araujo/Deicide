@@ -37,7 +37,6 @@ func generate_map():
 			var cell_scene:PackedScene = dict_tile_to_cell.get(tile_data.texture_origin)
 			var cell = cell_scene.instantiate()
 			
-			print(tile_data.texture_origin)
 			add_child(cell)
 			cell.position = Vector3(tile.x * GRID_SIZE, 0, tile.y * GRID_SIZE)
 			cell.update_faces(cells_positions)

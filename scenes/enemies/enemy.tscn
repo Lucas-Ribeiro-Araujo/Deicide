@@ -8,7 +8,8 @@ size = Vector2(2, 2)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feohv"]
 transparency = 1
 albedo_texture = ExtResource("1_86o7n")
-texture_filter = 2
+texture_filter = 0
+texture_repeat = false
 billboard_mode = 1
 
 [node name="Enemy" type="Node3D"]

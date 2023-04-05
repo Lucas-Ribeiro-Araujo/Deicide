@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://dugvnatxxe4q"]
+
+[ext_resource type="Script" path="res://src/world.gd" id="1_b86oc"]
+[ext_resource type="PackedScene" uid="uid://b7qu21pppyxki" path="res://scenes/map_creator/map.tscn" id="2_mri3g"]
+[ext_resource type="PackedScene" uid="uid://dmnypa7dmjphg" path="res://scenes/player.tscn" id="3_q0bxj"]
+[ext_resource type="PackedScene" uid="uid://ce371c20no7sb" path="res://scenes/game_ui.tscn" id="4_cxh3r"]
+
+[sub_resource type="Environment" id="Environment_ndu4p"]
+background_energy_multiplier = 0.0
+fog_light_color = Color(1, 0, 0, 1)
+fog_density = 0.1
+
+[node name="Main" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ndu4p")
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("1_b86oc")
+Map = ExtResource("2_mri3g")
+
+[node name="Player" parent="World" node_paths=PackedStringArray("world") instance=ExtResource("3_q0bxj")]
+world = NodePath("..")
+
+[node name="UI" parent="." instance=ExtResource("4_cxh3r")]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddo4pif64tpuc"]
+[gd_scene load_steps=6 format=3 uid="uid://ddo4pif64tpuc"]
 
 [ext_resource type="Script" path="res://src/map_creator/cell.gd" id="1_myoc0"]
 [ext_resource type="Material" uid="uid://bhb7url471yeq" path="res://data/materials/white_floor.tres" id="2_gc2us"]
 [ext_resource type="Material" uid="uid://k4j0c3bx7mgm" path="res://data/materials/white_walls.tres" id="3_1w0vm"]
+[ext_resource type="Material" uid="uid://b43gq33rp2joy" path="res://data/materials/white_ceiling.tres" id="3_ocl17"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hwret"]
 
@@ -11,7 +12,7 @@ script = ExtResource("1_myoc0")
 
 [node name="BottomTile" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_hwret")
-surface_material_override/0 = ExtResource("2_gc2us")
+surface_material_override/0 = ExtResource("3_ocl17")
 
 [node name="TopTile" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2, 0)

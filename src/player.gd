@@ -13,14 +13,14 @@ func _ready():
 #	targetPosition = Vector3(World.GRID_SIZE/2, 0 , World.GRID_SIZE/2)
 	currentGridPosition = Vector2i(targetPosition.x, targetPosition.z) / World.GRID_SIZE
 
-func  _process(delta):
+func  _process(delta) -> void:
 	if position != targetPosition:
 		position = lerp(position, targetPosition, 10 * delta)
 	
 	if rotation != targetRotation:
 		rotation = lerp(rotation, targetRotation, 10 * delta)
 
-func _unhandled_input(event):
+func _unhandled_input(event) -> void:
 	var direction:Vector2 = Vector2.ZERO
 	
 	if event.is_action_pressed("turn_left"):
@@ -44,4 +44,6 @@ func _unhandled_input(event):
 	if gridDirection != Vector2i.ZERO and world.has_tile(currentGridPosition + gridDirection):
 		targetPosition = targetPosition + (Vector3(gridDirection.x, 0, gridDirection.y) * World.GRID_SIZE)
 		currentGridPosition = Vector2i(targetPosition.x, targetPosition.z) / World.GRID_SIZE
-	
+
+func move_player(direction:Vector2i, rotation:float) -> void:
+	pass

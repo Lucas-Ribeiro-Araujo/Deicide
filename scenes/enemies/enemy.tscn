@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://8jbga84g60i3"]
 
-[ext_resource type="Texture2D" uid="uid://b517yeu5cgupq" path="res://data/textures/enemies/prototype_enemy.png" id="1_4e0ny"]
+[ext_resource type="Texture2D" uid="uid://dpmvpo511nixq" path="res://data/textures/enemies/kakazinho/kkzinho_idle_frame1.png" id="1_86o7n"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_gu5cb"]
 size = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feohv"]
 transparency = 1
-albedo_texture = ExtResource("1_4e0ny")
+albedo_texture = ExtResource("1_86o7n")
 texture_filter = 2
 billboard_mode = 1
 

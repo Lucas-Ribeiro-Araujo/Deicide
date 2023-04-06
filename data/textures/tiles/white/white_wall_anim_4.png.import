@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc75rn3x62spr"
-path.s3tc="res://.godot/imported/white_wall_anim_4.png-b8c98ad812c8f6d98aaefe2b9b4250b5.s3tc.ctex"
+path="res://.godot/imported/white_wall_anim_4.png-b8c98ad812c8f6d98aaefe2b9b4250b5.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://data/textures/tiles/white/white_wall_anim_4.png"
-dest_files=["res://.godot/imported/white_wall_anim_4.png-b8c98ad812c8f6d98aaefe2b9b4250b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/white_wall_anim_4.png-b8c98ad812c8f6d98aaefe2b9b4250b5.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

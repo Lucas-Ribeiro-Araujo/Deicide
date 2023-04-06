@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw5qmakonvkxo"
-path.s3tc="res://.godot/imported/text_white_ceil_1.png-447e9cc455bffb10a159ba68d1e681f7.s3tc.ctex"
+path="res://.godot/imported/text_white_ceil_1.png-447e9cc455bffb10a159ba68d1e681f7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://data/textures/tiles/white/text_white_ceil_1.png"
-dest_files=["res://.godot/imported/text_white_ceil_1.png-447e9cc455bffb10a159ba68d1e681f7.s3tc.ctex"]
+dest_files=["res://.godot/imported/text_white_ceil_1.png-447e9cc455bffb10a159ba68d1e681f7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

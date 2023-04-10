@@ -1,5 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://di8trywksvq21"]
+[gd_scene load_steps=6 format=3 uid="uid://di8trywksvq21"]
 
+[ext_resource type="Script" path="res://src/enemy/enemy.gd" id="1_065tg"]
+[ext_resource type="Texture2D" uid="uid://bgcqlppqf8jcm" path="res://data/textures/enemies/kakazinho/kkzinho_telegraph/kkzinho_telegraph_anim_texture.tres" id="1_hi6q3"]
 [ext_resource type="Texture2D" uid="uid://df07sl7xilx8w" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle_anim_texture.tres" id="1_igwcc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_gu5cb"]
@@ -7,14 +9,16 @@ size = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feohv"]
 transparency = 1
-albedo_texture = ExtResource("1_igwcc")
+albedo_texture = ExtResource("1_hi6q3")
 texture_filter = 0
 texture_repeat = false
 billboard_mode = 1
 
 [node name="Enemy" type="Node3D"]
+script = ExtResource("1_065tg")
+idle_texture = ExtResource("1_igwcc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="EnemySprite" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("QuadMesh_gu5cb")
 surface_material_override/0 = SubResource("StandardMaterial3D_feohv")

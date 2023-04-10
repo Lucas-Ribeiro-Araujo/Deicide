@@ -1,0 +1,14 @@
+[gd_resource type="AnimatedTexture" load_steps=4 format=3 uid="uid://d2jk3ulpt757w"]
+
+[ext_resource type="Texture2D" uid="uid://voneasg5aa7c" path="res://data/textures/enemies/kakazinho/kkzinho_attacking/kkzinho_attacking0.png" id="1_0qkbh"]
+[ext_resource type="Texture2D" uid="uid://cmxulmisohcwy" path="res://data/textures/enemies/kakazinho/kkzinho_attacking/kkzinho_attacking1.png" id="2_xa6ow"]
+[ext_resource type="Texture2D" uid="uid://mqhbhio4cp12" path="res://data/textures/enemies/kakazinho/kkzinho_attacking/kkzinho_attacking2.png" id="3_4vxgw"]
+
+[resource]
+frames = 3
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_0qkbh")
+frame_1/texture = ExtResource("2_xa6ow")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_4vxgw")
+frame_2/duration = 1.0

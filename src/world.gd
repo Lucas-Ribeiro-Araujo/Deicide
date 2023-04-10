@@ -9,19 +9,25 @@ const dict_tile_to_cell = {
 	Vector2i(1,0): preload("res://scenes/map_creator/tiles/cell_dark_souls.tscn"),
 }
 
-#const CELL:PackedScene = preload("res://scenes/map_creator/tiles/cell_light_souls.tscn")
 const ENEMY:PackedScene = preload("res://scenes/enemies/enemy.tscn")
 const GRID_SIZE:float = 2
 
 @export var Map:PackedScene
 
-var cells = []
-
 var cells_positions:Array[Vector2i]
 var enemies_positions:Array[Vector2i]
 
+var astar_grid:AStarGrid2D
+
 func _ready():
 	generate_map()
+	astar_grid = AStarGrid2D.new()
+	astar_grid.size = Vector2i(256,256)
+	astar_grid.cell_size = Vector2.ONE * GRID_SIZE
+	astar_grid.update()
+	
+	for cell in cells_positions:
+		astar_grid.set_point_solid(cell, false)
 
 func generate_map():
 	if Map:

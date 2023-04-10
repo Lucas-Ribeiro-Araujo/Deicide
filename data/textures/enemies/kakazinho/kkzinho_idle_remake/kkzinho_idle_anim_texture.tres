@@ -1,0 +1,26 @@
+[gd_resource type="AnimatedTexture" load_steps=8 format=3 uid="uid://df07sl7xilx8w"]
+
+[ext_resource type="Texture2D" uid="uid://usojwt7yi6rf" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle0.png" id="1_6se65"]
+[ext_resource type="Texture2D" uid="uid://ixg7r37rajjv" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle1.png" id="2_j1wv6"]
+[ext_resource type="Texture2D" uid="uid://djmjcjckqn3ql" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle2.png" id="3_1pxxi"]
+[ext_resource type="Texture2D" uid="uid://bctkp7fely3d2" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle3.png" id="4_fwat2"]
+[ext_resource type="Texture2D" uid="uid://dwyo5nd41dqtd" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle4.png" id="5_xfgv3"]
+[ext_resource type="Texture2D" uid="uid://55tc2uq7o422" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle5.png" id="6_pgfyw"]
+[ext_resource type="Texture2D" uid="uid://b3viem7bvw383" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle6.png" id="7_8oyhl"]
+
+[resource]
+frames = 7
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_6se65")
+frame_1/texture = ExtResource("2_j1wv6")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_1pxxi")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_fwat2")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_xfgv3")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_pgfyw")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_8oyhl")
+frame_6/duration = 1.0

@@ -17,6 +17,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/texture_origin = Vector2i(1, 0)
+0:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o4qun"]
 tile_size = Vector2i(64, 64)
@@ -37,4 +38,4 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-65529, 1, 0, -196601, 1, 0, -327673, 1, 0, -458745, 1, 0, -393217, 1, 0, -458751, 1, 0, -327678, 1, 0)
+layer_1/tile_data = PackedInt32Array(-3, 1, 0, -589821, 1, 0, -262138, 1, 0)

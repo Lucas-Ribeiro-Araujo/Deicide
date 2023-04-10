@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://8jbga84g60i3"]
+[gd_scene load_steps=4 format=3 uid="uid://di8trywksvq21"]
 
-[ext_resource type="Texture2D" uid="uid://c83gl1tby15yf" path="res://data/textures/enemies/kakazinho/kkzinho_idle_frame2.png" id="1_ehgou"]
+[ext_resource type="Texture2D" uid="uid://df07sl7xilx8w" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle_anim_texture.tres" id="1_igwcc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_gu5cb"]
 size = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feohv"]
 transparency = 1
-albedo_texture = ExtResource("1_ehgou")
+albedo_texture = ExtResource("1_igwcc")
 texture_filter = 0
 texture_repeat = false
 billboard_mode = 1

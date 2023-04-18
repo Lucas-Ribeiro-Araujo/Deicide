@@ -1,8 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://di8trywksvq21"]
 
-[ext_resource type="Script" path="res://src/enemy/enemy.gd" id="1_065tg"]
 [ext_resource type="Texture2D" uid="uid://bgcqlppqf8jcm" path="res://data/textures/enemies/kakazinho/kkzinho_telegraph/kkzinho_telegraph_anim_texture.tres" id="1_hi6q3"]
-[ext_resource type="Texture2D" uid="uid://df07sl7xilx8w" path="res://data/textures/enemies/kakazinho/kkzinho_idle_remake/kkzinho_idle_anim_texture.tres" id="1_igwcc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_gu5cb"]
 size = Vector2(2, 2)

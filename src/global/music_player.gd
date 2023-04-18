@@ -12,11 +12,10 @@ var beats_per_second:float
 func _ready():
 	var beats_per_minute = audio_player.stream.bpm
 	beats_per_second = beats_per_minute/60
-	print(beats_per_second)
+	print("Beats per second = %s" %beats_per_second)
 	timer.wait_time = beats_per_second / 2
 	timer.start()
 
 
 func _on_beat_timer_timeout():
 	music_beat.emit()
-	print("I IS BEAT")

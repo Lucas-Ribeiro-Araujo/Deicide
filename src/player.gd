@@ -12,6 +12,8 @@ func _ready():
 #	position = Vector3(World.GRID_SIZE/2, 0 , World.GRID_SIZE/2)
 #	targetPosition = Vector3(World.GRID_SIZE/2, 0 , World.GRID_SIZE/2)
 	currentGridPosition = Vector2i(targetPosition.x, targetPosition.z) / World.GRID_SIZE
+	
+	world.player = self
 
 func  _process(delta) -> void:
 	if position != targetPosition:

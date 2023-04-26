@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddo4pif64tpuc"]
 
-[ext_resource type="Script" path="res://src/map_creator/cell.gd" id="1_myoc0"]
+[ext_resource type="Script" path="res://src/map_creator/cell.gd" id="1_6sg6s"]
 [ext_resource type="Material" uid="uid://bhb7url471yeq" path="res://data/materials/white_floor.tres" id="2_gc2us"]
 [ext_resource type="Material" uid="uid://k4j0c3bx7mgm" path="res://data/materials/white_walls.tres" id="3_1w0vm"]
 [ext_resource type="Material" uid="uid://b43gq33rp2joy" path="res://data/materials/white_ceiling.tres" id="3_ocl17"]
@@ -8,7 +8,7 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_hwret"]
 
 [node name="CellLightSouls" type="Node3D"]
-script = ExtResource("1_myoc0")
+script = ExtResource("1_6sg6s")
 
 [node name="BottomTile" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_hwret")

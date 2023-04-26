@@ -17,14 +17,14 @@ const GRID_SIZE:float = 2
 var cells_positions:Array[Vector2i]
 var enemies_positions:Array[Vector2i]
 var player:Player
-var enemies:Array[Enemy]
+var enemies:Array
 
 var astar_grid:AStarGrid2D
 
 func _ready():
 	generate_map()
 	astar_grid = AStarGrid2D.new()
-	astar_grid.size = Vector2i(256,256)
+	astar_grid.size = Vector2i(64,64)
 	astar_grid.cell_size = Vector2.ONE * GRID_SIZE
 	astar_grid.update()
 	
@@ -34,11 +34,11 @@ func _ready():
 	
 	for cell in cells_positions:
 		astar_grid.set_point_solid(cell, false)
-		
-	astar_grid.update()
 	
+	print ("enemies: %s" % enemies.size())
 	for enemy in enemies:
-		enemy.initialize()
+		if enemy.has_method("initialize"):
+			enemy.initialize()
 
 func generate_map():
 	if Map:
@@ -60,8 +60,8 @@ func generate_map():
 		
 		for tile in enemies_positions:
 			var enemy = ENEMY.instantiate()
-			enemies.append(enemy)
 			add_child(enemy)
+			enemies.append(enemy)
 			enemy.position =  Vector3(tile.x * GRID_SIZE, 0, tile.y * GRID_SIZE)
 		
 		map.free()

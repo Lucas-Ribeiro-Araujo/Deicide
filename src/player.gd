@@ -24,20 +24,20 @@ func  _process(delta) -> void:
 
 func _unhandled_input(event) -> void:
 	var direction:Vector2 = Vector2.ZERO
-	
+
 	if event.is_action_pressed("turn_left"):
 		targetRotation = targetRotation + Vector3(0, 0.5 * PI ,0)
 	elif event.is_action_pressed("turn_right"):
 		targetRotation = targetRotation + Vector3(0,-0.5 * PI,0)
 	
 	if event.is_action_pressed("forward"):
-		direction += Vector2(0,-1)
-	if event.is_action_pressed("strafe_left"):
-		direction += Vector2(-1,0)
-	if event.is_action_pressed("strafe_right"):
-		direction += Vector2(1,0)
-	if event.is_action_pressed("backward"):
 		direction += Vector2(0,1)
+	if event.is_action_pressed("strafe_left"):
+		direction += Vector2(1,0)
+	if event.is_action_pressed("strafe_right"):
+		direction += Vector2(-1,0)
+	if event.is_action_pressed("backward"):
+		direction += Vector2(0,-1)
 	
 	direction = direction.rotated(-targetRotation.y)
 	

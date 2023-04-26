@@ -18,16 +18,20 @@ config/icon="res://icon.svg"
 [autoload]
 
 MusicManager="*res://scenes/world/music_player.tscn"
+DebugTools="*res://src/global/debug_tools.gd"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
-window/size/mode=3
 window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [importer_defaults]
 

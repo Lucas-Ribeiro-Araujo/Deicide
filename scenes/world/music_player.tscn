@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bglwug3dfw2tv"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://src/global/music_player.gd" id="1_6ln22"]
-[ext_resource type="AudioStream" uid="uid://buupxhosut1kc" path="res://data/audio/music/music_dungeon_140.mp3" id="2_tayax"]
+[ext_resource type="AudioStream" uid="uid://buupxhosut1kc" path="res://data/cutscenes/music/music_dungeon_140.mp3" id="2_tayax"]
 
 [node name="MusicPlayer" type="Node"]
 script = ExtResource("1_6ln22")

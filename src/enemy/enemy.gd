@@ -28,13 +28,15 @@ func initialize():
 func _process(delta):
 	if current_path:
 		if current_grid_position != target_grid_position:
-			position = lerp(position, Vector3(target_grid_position.x / World.GRID_SIZE,0,target_grid_position.y/ World.GRID_SIZE), 10 * delta)
+			position = lerp(position, Vector3(target_grid_position.x * World.GRID_SIZE,0,target_grid_position.y * World.GRID_SIZE), 10 * delta)
 	pass
 
 func _on_music_beat():
 	current_grid_position = target_grid_position
+	print(current_grid_position, world.player.currentGridPosition)
 	current_path = world.astar_grid.get_id_path(current_grid_position, world.player.currentGridPosition)
-	if current_path.size() > 1:
-		target_grid_position = current_path[1] * World.GRID_SIZE
+	if current_path.size() > 2:
+		target_grid_position = current_path[1]
 	for pos in current_path:
-		print(target_grid_position)
+		pass
+#		print(target_grid_position)

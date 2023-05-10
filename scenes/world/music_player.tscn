@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://caw61mdv3ccet"]
 
 [ext_resource type="Script" path="res://src/global/music_player.gd" id="1_6ln22"]
-[ext_resource type="AudioStream" uid="uid://buupxhosut1kc" path="res://data/cutscenes/music/music_dungeon_140.mp3" id="2_tayax"]
+[ext_resource type="AudioStream" uid="uid://buupxhosut1kc" path="res://data/music/music_dungeon_140.mp3" id="2_tayax"]
 
 [node name="MusicPlayer" type="Node"]
 script = ExtResource("1_6ln22")
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_tayax")
-volume_db = -80.0
+volume_db = -48.736
 autoplay = true
 
 [node name="BeatTimer" type="Timer" parent="."]

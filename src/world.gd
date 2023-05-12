@@ -26,6 +26,7 @@ func _ready():
 	astar_grid = AStarGrid2D.new()
 	astar_grid.size = Vector2i(WORLD_SIZE,WORLD_SIZE)
 	astar_grid.cell_size = Vector2.ONE * GRID_SIZE
+	astar_grid.diagonal_mode = 1
 	astar_grid.update()
 	
 	for posX in astar_grid.size.x:

@@ -3,7 +3,6 @@ extends Node3D
 
 # cell_light_souls = [0,0]
 # cell_dark_souls = [0,1]
-
 const dict_tile_to_cell = {
 	Vector2i(0,0): preload("res://scenes/map_creator/tiles/cell_light_souls.tscn"),
 	Vector2i(1,0): preload("res://scenes/map_creator/tiles/cell_dark_souls.tscn"),
@@ -11,6 +10,7 @@ const dict_tile_to_cell = {
 
 const ENEMY:PackedScene = preload("res://scenes/enemies/enemy.tscn")
 const GRID_SIZE:float = 2
+const WORLD_SIZE:int = 64
 
 @export var Map:PackedScene
 
@@ -24,7 +24,7 @@ var astar_grid:AStarGrid2D
 func _ready():
 	generate_map()
 	astar_grid = AStarGrid2D.new()
-	astar_grid.size = Vector2i(64,64)
+	astar_grid.size = Vector2i(WORLD_SIZE,WORLD_SIZE)
 	astar_grid.cell_size = Vector2.ONE * GRID_SIZE
 	astar_grid.update()
 	

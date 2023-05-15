@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://di8trywksvq21"]
+[gd_scene load_steps=6 format=3 uid="uid://di8trywksvq21"]
 
-[ext_resource type="Script" path="res://src/enemy/enemy.gd" id="1_nkffm"]
+[ext_resource type="Script" path="res://src/enemy/enemy.gd" id="1_3xnnd"]
 [ext_resource type="Texture2D" uid="uid://bbwekucyisw4t" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle.tres" id="2_ot5ju"]
+[ext_resource type="AudioStream" uid="uid://b0cn5axhao41f" path="res://data/sound/enemies/kkzinho/sfx_kkzinho_move.mp3" id="3_00dwq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_gu5cb"]
 size = Vector2(2, 2)
@@ -14,10 +15,13 @@ texture_repeat = false
 billboard_mode = 1
 
 [node name="Enemy" type="Node3D"]
-script = ExtResource("1_nkffm")
+script = ExtResource("1_3xnnd")
 idle_texture = ExtResource("2_ot5ju")
 
 [node name="EnemySprite" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("QuadMesh_gu5cb")
 surface_material_override/0 = SubResource("StandardMaterial3D_feohv")
+
+[node name="MoveSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_00dwq")

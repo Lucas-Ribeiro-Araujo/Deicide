@@ -26,6 +26,7 @@ sources/8 = SubResource("TileSetAtlasSource_018ns")
 script = ExtResource("1_krkgv")
 
 [node name="MapCreator" type="TileMap" parent="."]
+position = Vector2(1, 0)
 tile_set = SubResource("TileSet_o4qun")
 format = 2
 layer_0/name = "Cells"

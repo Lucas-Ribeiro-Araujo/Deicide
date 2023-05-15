@@ -7,7 +7,8 @@ class_name Minimap extends Panel
 var tiles:Array[Vector2i]
 
 func _ready():
-	for i in World.WORLD_SIZE:
-		var new_tile = tile_template.instantiate()
-		var color_rect:ColorRect = new_tile
-		grid.add_child(new_tile)
+	for x in World.WORLD_SIZE:
+		for y in World.WORLD_SIZE:
+			var new_tile = tile_template.instantiate()
+			var color_rect:ColorRect = new_tile
+			grid.add_child(new_tile)

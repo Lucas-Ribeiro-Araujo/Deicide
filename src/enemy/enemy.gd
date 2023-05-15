@@ -1,7 +1,7 @@
 class_name Enemy extends Node3D
 
-@onready var world:World = get_node("../")
-@onready var enemy_sprite:MeshInstance3D = $EnemySprite
+@onready var world:World = get_node("/root/Main/World")
+@onready var enemy_sprite:MeshInstance3D = $Sprite
 @onready var move_sound:AudioStreamPlayer3D = $MoveSound
 @export var idle_texture:AnimatedTexture
 

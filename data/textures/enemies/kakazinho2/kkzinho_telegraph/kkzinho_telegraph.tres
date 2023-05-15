@@ -1,0 +1,23 @@
+[gd_resource type="AnimatedTexture" load_steps=7 format=3 uid="uid://fnidj483nbqb"]
+
+[ext_resource type="Texture2D" uid="uid://55jwedjqq1kw" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle0.png" id="1_ptvhi"]
+[ext_resource type="Texture2D" uid="uid://nxfj5atunc3v" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle1.png" id="2_j6svj"]
+[ext_resource type="Texture2D" uid="uid://fs7i3b4a4bwi" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle2.png" id="3_j8b07"]
+[ext_resource type="Texture2D" uid="uid://coikrmppludrq" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle3.png" id="4_ft5pn"]
+[ext_resource type="Texture2D" uid="uid://bpu4ws145u5lh" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle4.png" id="5_4mfsh"]
+[ext_resource type="Texture2D" uid="uid://bg2vycr4k0j2d" path="res://data/textures/enemies/kakazinho2/kkzinho_idle/kkzinho_idle5.png" id="6_8wops"]
+
+[resource]
+frames = 6
+speed_scale = 24.0
+frame_0/texture = ExtResource("1_ptvhi")
+frame_1/texture = ExtResource("2_j6svj")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_j8b07")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_ft5pn")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_4mfsh")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_8wops")
+frame_5/duration = 1.0

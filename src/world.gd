@@ -10,7 +10,7 @@ const dict_tile_to_cell = {
 
 const ENEMY:PackedScene = preload("res://scenes/enemies/enemy.tscn")
 const GRID_SIZE:float = 2
-const WORLD_SIZE:int = 64
+const WORLD_SIZE:int = 16
 
 @export var Map:PackedScene
 

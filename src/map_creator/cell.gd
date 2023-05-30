@@ -5,18 +5,20 @@ class_name Cell
 @export var ceiling_material:StandardMaterial3D
 @export var floor_material:StandardMaterial3D
 
-@export var walls:Array[MeshInstance3D]
+#@export var ceiling
+#@export var floor
+#@export var walls:Array
 
-@onready var topFace = $TopTile
-@onready var northFace = $NorthTile
-@onready var eastFace = $EastTile
-@onready var southFace = $SouthTile
-@onready var westFace = $WestTile
-@onready var bottomFace = $BottomTile
+@onready var topFace = $BottomCollisionShape
+@onready var northFace = $NorthCollisionShape
+@onready var eastFace = $EastCollisionShape
+@onready var southFace = $SouthCollisionShape
+@onready var westFace = $WestCollisionShape
+@onready var bottomFace = $BottomCollisionShape
 
 func update_faces(cell_list) -> void:
-	@warning_ignore("narrowing_conversion")
 	var my_grid_position = Vector2i(position.x/World.GRID_SIZE, position.z/2)
+	
 	if cell_list.has(my_grid_position + Vector2i.RIGHT):
 		eastFace.queue_free()
 	if cell_list.has(my_grid_position + Vector2i.LEFT):
@@ -25,5 +27,3 @@ func update_faces(cell_list) -> void:
 		southFace.queue_free()
 	if cell_list.has(my_grid_position + Vector2i.UP):
 		northFace.queue_free()
-	
-	

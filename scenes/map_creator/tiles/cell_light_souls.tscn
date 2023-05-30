@@ -1,40 +1,71 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddo4pif64tpuc"]
+[gd_scene load_steps=7 format=3 uid="uid://ddo4pif64tpuc"]
 
 [ext_resource type="Script" path="res://src/map_creator/cell.gd" id="1_6sg6s"]
 [ext_resource type="Material" uid="uid://bhb7url471yeq" path="res://data/materials/white_floor.tres" id="2_gc2us"]
 [ext_resource type="Material" uid="uid://k4j0c3bx7mgm" path="res://data/materials/white_walls.tres" id="3_1w0vm"]
 [ext_resource type="Material" uid="uid://b43gq33rp2joy" path="res://data/materials/white_ceiling.tres" id="3_ocl17"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2ovu"]
+size = Vector3(1.99851, 0.0528621, 2.00425)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_hwret"]
 
-[node name="CellLightSouls" type="Node3D"]
+[node name="CellLightSouls" type="StaticBody3D"]
 script = ExtResource("1_6sg6s")
 
-[node name="BottomTile" type="MeshInstance3D" parent="."]
+[node name="BottomCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="BottomTile" type="MeshInstance3D" parent="BottomCollisionShape"]
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_ocl17")
 
-[node name="TopTile" type="MeshInstance3D" parent="."]
+[node name="TopCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="TopTile" type="MeshInstance3D" parent="TopCollisionShape"]
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_gc2us")
 
-[node name="SouthTile" type="MeshInstance3D" parent="."]
+[node name="SouthCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1, -3.82137e-15, 8.74228e-08, -8.74228e-08, 4.37114e-08, -1, 0, -1, -4.37114e-08, 0, 1, 1)
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="SouthTile" type="MeshInstance3D" parent="SouthCollisionShape"]
+transform = Transform3D(1, 0, 1.11075e-28, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_1w0vm")
 
-[node name="NorthTile" type="MeshInstance3D" parent="."]
+[node name="NorthCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, -8.74228e-08, 8.74228e-08, 8.74228e-08, 4.37114e-08, -1, 8.74228e-08, 1, 4.37114e-08, 0, 1, -1)
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="NorthTile" type="MeshInstance3D" parent="NorthCollisionShape"]
+transform = Transform3D(1, 0, -3.28405e-15, 0, 1, 0, -3.28405e-15, 0, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_1w0vm")
 
-[node name="EastTile" type="MeshInstance3D" parent="."]
+[node name="EastCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, -8.74228e-08, 4.37114e-08, -1, 1, -4.37114e-08, -8.74228e-08, 1, 1, 0)
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="EastTile" type="MeshInstance3D" parent="EastCollisionShape"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.68659e-16, 0, 2.68659e-16, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_1w0vm")
 
-[node name="WestTile" type="MeshInstance3D" parent="."]
+[node name="WestCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, 8.74228e-08, 4.37114e-08, -1, -1, 1.31134e-07, -8.74228e-08, -1, 1, 0)
+shape = SubResource("BoxShape3D_o2ovu")
+
+[node name="WestTile" type="MeshInstance3D" parent="WestCollisionShape"]
+transform = Transform3D(1, 0, 0, 0, 1, -8.0596e-16, 0, -8.05959e-16, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_hwret")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_1w0vm")

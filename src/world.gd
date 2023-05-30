@@ -14,11 +14,12 @@ const WORLD_SIZE:int = 16
 
 @export var Map:PackedScene
 
+signal grid_changed(new_grid:AStarGrid2D)
+
 var cells_positions:Array[Vector2i]
 var enemies_positions:Array[Vector2i]
 var player:Player
 var enemies:Array
-
 var astar_grid:AStarGrid2D
 
 func _ready():
@@ -69,3 +70,9 @@ func generate_map():
 
 func has_tile(pos:Vector2i) -> bool:
 	return cells_positions.has(pos)
+
+func update_tile(position:Vector2i, solid:bool):
+	astar_grid.set_point_solid(position, solid)
+	print(solid)
+	astar_grid.update()
+	grid_changed.emit(astar_grid)

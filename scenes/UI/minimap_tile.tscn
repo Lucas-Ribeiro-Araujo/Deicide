@@ -2,3 +2,4 @@
 
 [node name="Tile" type="ColorRect"]
 custom_minimum_size = Vector2(4, 4)
+color = Color(0, 0, 0, 1)
